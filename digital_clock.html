@@ -3,10 +3,6 @@
 <head>
   <meta charset="UTF-8">
   <title>digital_clock</title>
-   <style>
-    #div1{
-      background-color: #66ccda;
-    }
   </style>
  </head>
 <script type="text/javascript">
@@ -16,8 +12,10 @@
     var mm = ('0' + date.getMinutes()).slice(-2);//分
     var ss = ('0' + date.getSeconds()).slice(-2);//秒
     now = "現在の時刻は" + hh + "時" + mm + "分" + ss + "秒です";
-    var id = document.getElementById('div1');
-    id.innerHTML = now;
+    var id = document.getElementById('pos');
+    id.style.fontSize = "100pt";
+    id.style.color = #008080;
+    id.innerHTML = now;  
   }
   
   function strClock(){
@@ -25,6 +23,6 @@
   }
   </script>
   <body onload = "strClock();">
-    <div id = "div1"></div>
+    <div id = "pos"></div>
   </body>  
 </html>
